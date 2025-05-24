@@ -1,7 +1,8 @@
 import os
-import requests
 import uuid
+
 import dotenv
+import requests
 
 
 class GigaChatToken:
@@ -38,7 +39,7 @@ class GigaChatToken:
         dict or None
             Ответ API в формате словаря, содержащий токен и срок его действия, или None в случае ошибки.
         """
-        rq_uid = str(uuid.uuid4())     
+        rq_uid = str(uuid.uuid4())
 
         url = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
 
@@ -56,7 +57,7 @@ class GigaChatToken:
             response.raise_for_status()
             return response.json()
         except requests.RequestException as e:
-            print(f"Ошибка: {str(e)}")   
+            print(f"Ошибка: {str(e)}")
             return None
 
     def return_token(self):
@@ -76,10 +77,10 @@ class GigaChatToken:
             if token_response:
                 giga_token = token_response.get("access_token")
                 if giga_token:
-                  return giga_token
-                else :
+                    return giga_token
+                else:
                     print("Не удалось получить access_token из ответа API.")
                     return None
             else:
-                print(f"Не удалось получить ответ от API.")
+                print("Не удалось получить ответ от API.")
                 return None
