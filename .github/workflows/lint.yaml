@@ -62,6 +62,8 @@ jobs:
           VALIDATE_PYTHON_MYPY: false
           VALIDATE_PYTHON_PYINK: false
           VALIDATE_YAML_PRETTIER: false
+          SAVE_SUPER_LINTER_OUTPUT: false
+          SAVE_SUPER_LINTER_SUMMARY: false
           FIX_PYTHON_BLACK: true
           FIX_PYTHON_ISORT: true
           FIX_PYTHON_RUFF: true
