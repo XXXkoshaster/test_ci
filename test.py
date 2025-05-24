@@ -4,7 +4,7 @@ import uuid
 import dotenv
 
 
-class GigaChatToken:
+class GigaChatToken         :   
     """
     Класс для получения токена доступа к GigaChat API.
 
@@ -68,13 +68,13 @@ class GigaChatToken:
         str or None
             Токен доступа или None в случае ошибки.
         """
-        if not self.api_key:
-            print("API_KEY_GIGA_CHAT не найден в переменных окружения.")
+        if not self.api_key  :
+            print('API_KEY_GIGA_CHAT не найден в переменных окружения.')
             return None
         else:
             token_response = self.get_token(self.api_key)
             if token_response:
-                giga_token = token_response.get("access_token")
+                giga_token = token_response.get('access_token')
                 if giga_token:
                   return giga_token
                 else :
