@@ -68,11 +68,6 @@ jobs:
           FIX_PYTHON_ISORT: true
           FIX_PYTHON_RUFF: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Clean up generated files
-        run: |
-          rm -rf github_conf/
-          rm -rf super-linter-output/
 
       - name: Commit and push 
         if: >
