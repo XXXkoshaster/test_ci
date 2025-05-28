@@ -59,12 +59,13 @@ jobs:
           VALIDATE_PYTHON_PYLINT: false
           VALIDATE_PYTHON_FLAKE8: false
           VALIDATE_JSON_PRETTIER: false
+          VALIDATE_PYTHON_BLACK: false
           VALIDATE_PYTHON_MYPY: false
           VALIDATE_PYTHON_PYINK: false
           VALIDATE_YAML_PRETTIER: false
           SAVE_SUPER_LINTER_OUTPUT: false
           SAVE_SUPER_LINTER_SUMMARY: false
-          FIX_PYTHON_BLACK: true
+          CREATE_LOG_FILE: false
           FIX_PYTHON_ISORT: true
           FIX_PYTHON_RUFF: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
